@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+
+         body{
+             background-color: maroon;
+         }
+       .box{
+           width: 70%;
+           background-color: #F5F5DC;
+         height 100%;
+           margin-left: 14%;
+           text-align: center;
+         margin top 20px;
+          
+
+       }
+       #inp{
+           border-radius: 40px;
+           font-size: large;
+       }
+       ul{
+           list-style: none;
+       }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+        }
+        #btn{
+           border: 2px solid black;
+           border-radius: 45px;
+           font-style: italic;
+           margin: 15px;
+          padding: 20px;
+          
+        }
+        #btn:hover{
+            background-color: coral;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <section class="box">
+        <h1>FizzBuzz Game</h1>
+        <input type="number" id="inp"><br>
+        <button  id=btn onclick="fn()">Find</button><br>
+        <ul id="ul"></ul>
+    </section>
+    
+    <script>
+         function fn(){
+            var inputref =document.getElementById("inp").value;
+           
+            fn1(inputref);
+
+        }
+
+      function fn1(num){
+        var ul = document.getElementById("ul");
+        
+
+        for(var i=1;i<=num;i++){
+            if(i%3==0){
+                if(i%5==0){
+                    var li = document.createElement('li');
+                    li.innerText="FizzBuzz";
+                    ul.appendChild(li);
+                }
+                else{
+                    var li = document.createElement('li');
+                    li.innerText="Fizz";
+                    ul.appendChild(li);
+                }
+            }
+            else {
+                if(i%5==0){
+                    var li = document.createElement('li');
+                    li.innerText="Buzz";
+                    ul.appendChild(li);
+                }
+                else{
+                    var li = document.createElement('li');
+                    li.innerText= i;
+                    ul.appendChild(li);
+                }
+            }
+        }
+    }
+      
+    </script>
+</body>
+</html>
